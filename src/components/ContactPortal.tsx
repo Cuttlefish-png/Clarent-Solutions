@@ -4,6 +4,7 @@ import { CheckCircle } from 'lucide-react';
 
 const ContactPortal: React.FC = () => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [challenge, setChallenge] = useState('');
 
   useEffect(() => {
     if (window.location.search.includes('success')) {
@@ -167,16 +168,13 @@ const ContactPortal: React.FC = () => {
                     <label className="block text-sm font-inter font-medium text-gray-700 mb-2">
                       Annual Revenue *
                     </label>
-                    <select
+                    <input
+                      type="text"
                       name="revenue"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg font-inter focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                    >
-                      <option value="">Select revenue range</option>
-                      {revenueRanges.map((range) => (
-                        <option key={range} value={range}>{range}</option>
-                      ))}
-                    </select>
+                      placeholder="$10M - $50M (example)"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg font-inter focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder-gray-400"
+                    />
                   </div>
 
                   <div>
@@ -186,26 +184,31 @@ const ContactPortal: React.FC = () => {
                     <select
                       name="challenge"
                       required
+                      value={challenge}
+                      onChange={e => setChallenge(e.target.value)}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg font-inter focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     >
                       <option value="">Select your primary challenge</option>
-                      {challenges.map((challenge) => (
-                        <option key={challenge} value={challenge}>{challenge}</option>
+                      {challenges.map((c) => (
+                        <option key={c} value={c}>{c}</option>
                       ))}
                     </select>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-inter font-medium text-gray-700 mb-2">
-                      Please Describe Your Challenge
-                    </label>
-                    <textarea
-                      name="otherChallenge"
-                      rows={3}
-                      placeholder="Please describe the specific challenge you're facing..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg font-inter focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
-                    />
-                  </div>
+                  {challenge === 'Other (please specify)' && (
+                    <div>
+                      <label className="block text-sm font-inter font-medium text-gray-700 mb-2">
+                        Please Describe Your Challenge *
+                      </label>
+                      <textarea
+                        name="otherChallenge"
+                        rows={3}
+                        required
+                        placeholder="Please describe the specific challenge you're facing..."
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-inter focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
+                      />
+                    </div>
+                  )}
 
                   <div>
                     <label className="block text-sm font-inter font-medium text-gray-700 mb-2">
