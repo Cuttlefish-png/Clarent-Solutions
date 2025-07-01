@@ -99,7 +99,7 @@ const ContactPortal: React.FC = () => {
                   method="POST" 
                   data-netlify="true" 
                   className="space-y-6"
-                  action="/contact?success"
+                  action="/thank-you"
                 >
                   <input type="hidden" name="form-name" value="consult-contact" />
                   <div className="grid grid-cols-2 gap-4">
