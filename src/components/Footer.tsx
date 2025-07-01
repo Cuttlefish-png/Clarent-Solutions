@@ -38,13 +38,13 @@ const Footer: React.FC = () => {
               >
                 <div className="flex items-center space-x-3">
                   <img 
-                    src="/Typhon Group.png" 
-                    alt="Typhon Group" 
+                    src="/Clarent Solutions.png" 
+                    alt="Clarent Solutions" 
                     className="h-10 w-auto"
                   />
                   <div>
-                    <h3 className="font-playfair font-bold text-xl">TYPHON</h3>
-                    <p className="text-sm font-inter text-teal-300">GROUP</p>
+                    <h3 className="font-playfair font-bold text-xl">CLARENT</h3>
+                    <p className="text-sm font-inter text-teal-300">SOLUTIONS</p>
                   </div>
                 </div>
                 
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 font-inter text-sm">
-              © 2025 Typhon Group. All rights reserved.
+              © 2025 Clarent Solutions. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6">

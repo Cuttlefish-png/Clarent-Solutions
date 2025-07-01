@@ -224,8 +224,8 @@ const HeroSection: React.FC = () => {
               className="relative z-20 flex items-center justify-center"
             >
               <motion.img
-                src="/Typhon Group.png"
-                alt="Typhon Group"
+                src="/Clarent Solutions.png"
+                alt="Clarent Solutions"
                 className="w-80 h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl"
                 animate={{ 
                   y: [-8, 8, -8],

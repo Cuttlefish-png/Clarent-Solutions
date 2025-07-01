@@ -47,20 +47,20 @@ const Header: React.FC = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <img 
-              src="/Typhon Group.png" 
-              alt="Typhon Group" 
+              src="/Clarent Solutions.png" 
+              alt="Clarent Solutions" 
               className="h-10 w-auto"
             />
             <div className="hidden sm:block">
               <h1 className={`font-playfair font-bold text-xl ${
                 isScrolled ? 'text-navy-800' : 'text-white'
               }`}>
-                TYPHON
+                CLARENT
               </h1>
               <p className={`text-sm font-inter ${
                 isScrolled ? 'text-navy-600' : 'text-teal-200'
               }`}>
-                GROUP
+                SOLUTIONS
               </p>
             </div>
           </motion.div>
